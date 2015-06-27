@@ -1,0 +1,25 @@
+{
+  "name": "RobotMagicCardTrick",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jackybaltes/RobotMagicCardTrick",
+  "authors": [
+    "Jacky (Hansjoerg) Baltes <jacky.baltes@gmail.com>"
+  ],
+  "description": "Play a simple magic card trick with the Darwin robot",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Robotics",
+    "Magic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

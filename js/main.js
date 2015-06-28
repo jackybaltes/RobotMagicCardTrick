@@ -4,6 +4,8 @@
 
 var resourcesLoading = 0;
 
+cards = [ ];
+
 stateTreeRoot = {
     name: null,
     clips: [],
@@ -28,25 +30,85 @@ stateTreeRoot = {
                                     name: "Media/King.wav",
                                     clips: [{start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 7}],
                                     audio: null,
-                                    children: null
+                                    children: [
+                                        {
+                                            name: "Media/Spade.wav",
+                                            clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                            audio: null,
+                                            children: null,
+                                            card: 6
+                                        },
+                                        {
+                                            name: "Media/Clubs.wav",
+                                            clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 5
+                                        }
+                                    ]
                                 },
                                 {
                                     name: "Media/Queen.wav",
                                     clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 7} ],
                                     audio: null,
-                                    children: null
+                                    children: [
+                                        {
+                                            name: "Media/Spade.wav",
+                                            clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                            audio: null,
+                                            children: null,
+                                            card: 10
+                                        },
+                                        {
+                                            name: "Media/Clubs.wav",
+                                            clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 9,
+                                        }
+                                    ]
                                 },
                                 {
                                     name: "Media/Jack.wav",
                                     clips: [{start: 0, end: 3}, {start: 2, end: 6}, {start: 6, end: 9}],
                                     audio: null,
-                                    children: null
+                                    children: [
+                                        {
+                                            name: "Media/Spade.wav",
+                                            clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                            audio: null,
+                                            children: null,
+                                            card: 14
+                                        },
+                                        {
+                                            name: "Media/Clubs.wav",
+                                            clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 15
+                                        }
+                                    ]
                                 },
                                 {
                                     name: "Media/Ace.wav",
                                     clips: [{start: 0, end: 3}, {start: 3, end: 6}, {start: 6, end: 9}],
                                     audio: null,
-                                    children: null
+                                    children: [
+                                        {
+                                            name: "Media/Spade.wav",
+                                            clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                            audio: null,
+                                            children: null,
+                                            card: 2
+                                        },
+                                        {
+                                            name: "Media/Clubs.wav",
+                                            clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 1
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -64,25 +126,86 @@ stateTreeRoot = {
                                             name: "Media/Two.wav",
                                             clips: [{start: 0, end: 3}, {start: 3, end: 6} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 50
+
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 49
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Three.wav",
                                             clips: [ {start: 0, end: 3}, {start: 2, end: 6} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 46
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 45
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Four.wav",
                                             clips: [{start: 0, end: 3}, {start: 3, end: 6} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 42
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 41
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Five.wav",
                                             clips: [{start: 0, end: 3}, {start: 3, end: 5}, {start: 5, end: 7}],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 38
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 37
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -95,31 +218,107 @@ stateTreeRoot = {
                                             name: "Media/Six.wav",
                                             clips: [{start: 0, end: 3}, {start: 3, end: 6}, {start: 6, end: 9} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 34
+
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 33
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Seven.wav",
                                             clips: [ {start: 0, end: 3}, {start: 3, end: 5} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 30
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 29
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Eight.wav",
                                             clips: [{start: 0, end: 2}, {start: 2, end: 4} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 26
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 25
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Nine.wav",
                                             clips: [{start: 0, end: 4}, {start: 3, end: 7} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 22
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 21
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Ten.wav",
                                             clips: [{start: 0, end: 3}, {start: 2, end: 5} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Spade.wav",
+                                                    clips: [{start: 0, end: 2}, {start: 2, end: 5}, {start: 4, end: 7}],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 18
+                                                },
+                                                {
+                                                    name: "Media/Clubs.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 17
+                                                }
+                                            ]
                                         }
 
                                     ]
@@ -142,25 +341,85 @@ stateTreeRoot = {
                                     name: "Media/King.wav",
                                     clips: [{start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 7}],
                                     audio: null,
-                                    children: null
+                                    children: [
+                                        {
+                                            name: "Media/Diamond.wav",
+                                            clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 8
+                                        },
+                                        {
+                                            name: "Media/Hearts.wav",
+                                            clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 7
+                                        }
+                                    ]
                                 },
                                 {
                                     name: "Media/Queen.wav",
                                     clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 7} ],
                                     audio: null,
-                                    children: null
+                                    children: [
+                                        {
+                                            name: "Media/Diamond.wav",
+                                            clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 12
+                                        },
+                                        {
+                                            name: "Media/Hearts.wav",
+                                            clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 11
+                                        }
+                                    ]
                                 },
                                 {
                                     name: "Media/Jack.wav",
                                     clips: [{start: 0, end: 3}, {start: 2, end: 6}, {start: 6, end: 9}],
                                     audio: null,
-                                    children: null
+                                    children: [
+                                        {
+                                            name: "Media/Diamond.wav",
+                                            clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 16
+                                        },
+                                        {
+                                            name: "Media/Hearts.wav",
+                                            clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 15
+                                        }
+                                    ]
                                 },
                                 {
                                     name: "Media/Ace.wav",
                                     clips: [{start: 0, end: 3}, {start: 3, end: 6}, {start: 6, end: 9}],
                                     audio: null,
-                                    children: null
+                                    children: [
+                                        {
+                                            name: "Media/Diamond.wav",
+                                            clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 4
+                                        },
+                                        {
+                                            name: "Media/Hearts.wav",
+                                            clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                            audio: null,
+                                            children: null,
+                                            card: 3
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -178,25 +437,85 @@ stateTreeRoot = {
                                             name: "Media/Two.wav",
                                             clips: [{start: 0, end: 3}, {start: 3, end: 6} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 52
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 51
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Three.wav",
                                             clips: [ {start: 0, end: 3}, {start: 2, end: 6} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 48
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 47
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Four.wav",
                                             clips: [{start: 0, end: 3}, {start: 3, end: 6} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 44
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 43
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Five.wav",
                                             clips: [{start: 0, end: 3}, {start: 3, end: 5}, {start: 5, end: 7}],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 40
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 39
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -209,31 +528,106 @@ stateTreeRoot = {
                                             name: "Media/Six.wav",
                                             clips: [{start: 0, end: 3}, {start: 3, end: 6}, {start: 6, end: 9} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 36
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 35
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Seven.wav",
                                             clips: [ {start: 0, end: 3}, {start: 3, end: 5} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 32
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 31
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Eight.wav",
                                             clips: [{start: 0, end: 2}, {start: 2, end: 4} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 28
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 27
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Nine.wav",
                                             clips: [{start: 0, end: 4}, {start: 3, end: 7} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 24
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 23
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Media/Ten.wav",
                                             clips: [{start: 0, end: 3}, {start: 2, end: 5} ],
                                             audio: null,
-                                            children: null
+                                            children: [
+                                                {
+                                                    name: "Media/Diamond.wav",
+                                                    clips: [{start: 0, end: 3}, {start: 3, end: 5} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 20
+                                                },
+                                                {
+                                                    name: "Media/Hearts.wav",
+                                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 6} ],
+                                                    audio: null,
+                                                    children: null,
+                                                    card: 19
+                                                }
+                                            ]
                                         }
 
                                     ]
@@ -298,6 +692,20 @@ function loadSound(soundSrc) {
     soundFile.addEventListener("error", onError, true);
 
     return soundFile;
+}
+
+function loadImage(imageSrc) {
+    resourcesLoading++;
+
+    var loaded = false;
+
+    var img = new Image();
+    img.onload = function() {
+        resourcesLoading--;
+        onResourceLoad();
+    }
+    img.src = imageSrc;
+    return img;
 }
 
 function onResourceLoad() {
@@ -366,8 +774,15 @@ function onDocumentLoaded() {
     var context = controller.getContext('2d');
     context.fillStyle = 'antiquewhite';
     context.fillRect(0, 0, controller.width, controller.height);
-
+    loadCards();
     loadSounds(stateTreeRoot);
+}
+
+function loadCards() {
+    for( var i = 1; i < 53; i++ ) {
+        img = loadImage( "Cards/" + i + ".png");
+        cards.push(img);
+    }
 }
 
 var currentSound = null;
@@ -431,7 +846,7 @@ function playRandomSound() {
             var upper = Math.floor(numBlocks / 2) + skip;
 
             context.fillStyle = 'antiquewhite';
-            context.fillRect(0, controller.height/3-1, controller.width, controller.height / 3 + 1);
+            context.fillRect(0, controller.height / 3 - 1, controller.width, controller.height / 3 + 1);
 
             for (var i = 0; i < numBlocks; i++) {
                 if (( i >= lower ) && ( i < upper )) {
@@ -489,26 +904,34 @@ function playRandomSound() {
                     nextNode = currentNode;
                 }
             }
-        }
-        console.log("Found the following number of options " + arr.length);
-        if (currentSound != null) {
-            currentSound.audio.pause();
-            currentSound.audio.currentTime = 0;
-            currentSound = null;
-        }
-
-        currentSound = arr[Math.floor(Math.random() * arr.length)];
-        if (currentSound != null) {
-            if (currentNode == nextNode) {
-                console.log("Playing this sound " + currentSound.audio.currentSrc + " from time " + currentSound.start + " for " + currentSound.timeout)
-                currentSound.audio.currentTime = currentSound.start;
-                currentSound.audio.play();
-                setTimeout(playRandomSound, currentSound.timeout);
-            } else {
-                console.log("Moving to next node " + nextNode.name);
-                currentNode = nextNode;
-                setTimeout(playRandomSound, 10);
+            console.log("Found the following number of options " + arr.length);
+            if (currentSound != null) {
+                currentSound.audio.pause();
+                currentSound.audio.currentTime = 0;
+                currentSound = null;
             }
+
+            currentSound = arr[Math.floor(Math.random() * arr.length)];
+            if (currentSound != null) {
+                if (currentNode == nextNode) {
+                    console.log("Playing this sound " + currentSound.audio.currentSrc + " from time " + currentSound.start + " for " + currentSound.timeout)
+                    currentSound.audio.currentTime = currentSound.start;
+                    currentSound.audio.play();
+                    setTimeout(playRandomSound, currentSound.timeout);
+                } else {
+                    console.log("Moving to next node " + nextNode.name);
+                    currentNode = nextNode;
+                    setTimeout(playRandomSound, 10);
+                }
+            }
+        } else {
+            var cardaudio = document.getElementById("cardaudio");
+            cardaudio.addEventListener( 'ended', function () {
+                var card = document.getElementById("card");
+                ctx = card.getContext("2d");
+                ctx.drawImage( cards[node.card - 1], 0, 0, card.width, card.height );
+            });
+            cardaudio.play();
         }
     }
 }

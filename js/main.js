@@ -26,25 +26,25 @@ stateTreeRoot = {
                             children: [
                                 {
                                     name: "Media/King.wav",
-                                    clips: [{start: 0, end: 3}, {start: 2, end: 5}, {start: 5, end: 8}],
+                                    clips: [{start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 7}],
                                     audio: null,
                                     children: null
                                 },
                                 {
                                     name: "Media/Queen.wav",
-                                    clips: [{start: 0, end: 3}, {start: 3, end: 7}, {start: 6, end: 10}],
+                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 7} ],
                                     audio: null,
                                     children: null
                                 },
                                 {
                                     name: "Media/Jack.wav",
-                                    clips: [{start: 0, end: 3}, {start: 2, end: 5}, {start: 5, end: 8}],
+                                    clips: [{start: 0, end: 3}, {start: 2, end: 6}, {start: 6, end: 9}],
                                     audio: null,
                                     children: null
                                 },
                                 {
                                     name: "Media/Ace.wav",
-                                    clips: [{start: 0, end: 3}, {start: 3, end: 7}, {start: 6, end: 10}],
+                                    clips: [{start: 0, end: 3}, {start: 3, end: 6}, {start: 6, end: 9}],
                                     audio: null,
                                     children: null
                                 }
@@ -67,7 +67,32 @@ stateTreeRoot = {
                             name: "Media/Face Card.wav",
                             clips: [{start: 0, end: 3}, {start: 2, end: 5}, {start: 5, end: 8}],
                             audio: null,
-                            children: null
+                            children: [
+                                {
+                                    name: "Media/King.wav",
+                                    clips: [{start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 7}],
+                                    audio: null,
+                                    children: null
+                                },
+                                {
+                                    name: "Media/Queen.wav",
+                                    clips: [ {start: 0, end: 2}, {start: 2, end: 4}, {start: 4, end: 7} ],
+                                    audio: null,
+                                    children: null
+                                },
+                                {
+                                    name: "Media/Jack.wav",
+                                    clips: [{start: 0, end: 3}, {start: 2, end: 6}, {start: 6, end: 9}],
+                                    audio: null,
+                                    children: null
+                                },
+                                {
+                                    name: "Media/Ace.wav",
+                                    clips: [{start: 0, end: 3}, {start: 3, end: 6}, {start: 6, end: 9}],
+                                    audio: null,
+                                    children: null
+                                }
+                            ]
                         },
                         {
                             name: "Media/Number Card.wav",
@@ -264,6 +289,10 @@ function playRandomSound() {
             console.log('skip ' + skip);
             var lower = Math.floor(numBlocks / 2);
             var upper = Math.floor(numBlocks / 2) + skip;
+
+            context.fillStyle = 'antiquewhite';
+            context.fillRect(0, controller.height/3-1, controller.width, controller.height / 3 + 1);
+
             for (var i = 0; i < numBlocks; i++) {
                 if (( i >= lower ) && ( i < upper )) {
                     if (i == lower) {
